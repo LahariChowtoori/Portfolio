@@ -1,7 +1,7 @@
 import React from 'react';
 
-import HTML from '../assets/html.png';
-import CSS from '../assets/css.png';
+import Tableau from '../assets/Tableau.png';
+import Azure from '../assets/Azure.png';
 import JavaScript from '../assets/javascript.png';
 import Angular from '../assets/Angular.png';
 import Node from '../assets/node.png';
@@ -33,12 +33,12 @@ const Skills = () => {
                   <p className='my-4'>Type Script</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
-                  <p className='my-4'>HTML</p>
+                  <img className='w-20 mx-auto' src={Tableau} alt="HTML icon" />
+                  <p className='my-4'>Tableau</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={CSS} alt="HTML icon" />
-                  <p className='my-4'>CSS</p>
+                  <img className='w-20 mx-auto' src={Azure} alt="HTML icon" />
+                  <p className='my-4'>Azure</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto' src={JavaScript} alt="HTML icon" />

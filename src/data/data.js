@@ -194,22 +194,25 @@ export const workExperiences= [
     {
       _id: 4,
       title: "Research Fellow",
-      subTitle: "Dynamic Sustainability Lab- (09/2023 - Present)",
+      subTitle: "Dynamic Sustainability Lab- (09/2023 - 05/2024)",
       location: "Syracuse University, NY",
       description: [
          " • Lead data scientist for a nationally recognized 50+ person strategic research and consulting organization supporting both governments and industry around the globe",
          " • Developed a blockchain-based supply chain prototype using Ethereum and enabling real-time tracking of carbon emissions at each stage, leading to more transparent monitoring, and reporting for climate-smart commodities under a $60M USDA research project as well as for the U.S. based voluntary carbon market",
          " • Collaborating with SIMBA Chain to develop a supply chain prototype leveraging Blocks platform, enabling real-time tracking of carbon emissions at each stage, leading to more transparent monitoring and reporting",
-         " • Delivered the key research presentation with the prototype on ‘Climate & Energy Tracking & Data Verification: Blockchain- Driven Business Models’ at the international 2024 Sustainability Summit held in Boston, MA",       
+         " • Delivered the key research presentation with the prototype on ‘Climate & Energy Tracking & Data Verification: Blockchain- Driven Business Models’ at the international 2024 Sustainability Summit held in MIT,Boston",       
       ],
     },
     {
       _id: 3,
       title: "Sports Data Analyst",
-      subTitle: "SIDEARM Sports - ",
+      subTitle: "SIDEARM Sports - (06/2023 - 08/2023)",
       location: "Syracuse, NY",
       description: [
-         " • ",
+         "•  Led a 12-member team in developing an advanced sports website, executing efficient ETL processes for data migration across 30 educational institutions",
+         "•  Developed and maintained CI/CD pipelines, achieving a 95% deployment success rate for multiple schools and universities",
+         "•  Engineered a real-time data processing pipeline with MongoDB, converting live game streams into JSON format for dynamic sports analytics, enhancing platform efficiency by 30%",
+         "•  Designed and managed robust NoSQL database schemas and Apache Spark workflows, ensuring high data integrity and real-time updates, processing 10,000 records weekly",
            ],
     },
     {
@@ -245,24 +248,31 @@ export const workExperiences= [
 export const LahariProjectsData=[
     {
       id:1,
-      title: "Exploring GDP Trends and Predictive Insights using PySpar",
-      des: "Enhanced PySpark workflows for processing extensive global GDP data, reducing processing time by30% and improving scalability, enabling efficient analysis of large-scale economic datasets. • Conducted statistical modeling, predictive techniques like linear regression, evaluating impact of health, education, industrial factors on GDP growth, yielding 12% improved insights. • Leveraged K-means clustering for nation segmentation based on GDP, net trade; Gradient Boosting, AutoRegressor for GDP forecasting, boosting accuracy 25%. • Implemented comprehensive trade balance analysis using PCA and Random Forest Regression, identifying significant trade surplus and deficit trends across countries with high accuracy.",
-      src: 'Cafe.png',
-      githubLink: "https://github.com/ChowtooriKedari/cafe_management"
+      title: "Exploring GDP Trends and Predictive Insights using PySpark",
+      des: "A wealth of data from the World Bank is used to formulate the project's objectives: to probe deep into economic and demographic indicators, conduct thorough trend analyses, and develop predictive models. Central to our analysis was GDP and its relation to key factors such as population, trade, agriculture, and the correlation of economic growth with investments in education, healthcare, industrial, and agricultural activities. In our report we have produced valuable insights into the economic and demographic profiles of different countries. A particular emphasis was placed on the role of industrial activities and research and development in shaping economic growth. This endeavor not only sheds light on current economic and social conditions but also serves as a valuable tool for policymakers and researchers in strategizing for future developmental trajectories.",
+      src: 'GDPTrends.jpeg',
+      githubLink: "https://github.com/LahariChowtoori/Exploring-Global-GDP-Trends-and-Predictive-Insights"
     },
     {
       id:2,
-      title: "Enterprise Data Warehouse Development",
-      des: "• Applied an advanced ETL pipeline strategy incorporating Kimball Architecture principles, leading the development of scalable data warehouse for retail and streaming enterprise, achieving 40% increase in data processing efficiency. • Crafted a Snowflake-centric data architecture, amalgamating data from S3 Buckets, Azure Blob Storage, and Minio into a single warehouse, boosting data accessibility and management efficiency, which led to 30% uplift in analysis and reporting. • Employed DBT Cloud for intricate data modeling and pipeline construction by merging finance data from retail and streaming into data marts, thereby enhancing accuracy and analytical precision by 25% and amplifying strategic insights. • Deployed Power BI, integrating and merging datasets from DBT into dynamic dashboards, reducing latency by 45% and improving decision-making for over 500 users.",
-      src: 'Todo.png',
-      githubLink: "https://github.com/ChowtooriKedari/todo_manager"
+      title: "Healthcare Cost Analysis",
+      des: "This project involves analyzing healthcare cost data from a Health Management Organization (HMO). The primary objectives were to predict high-cost customers and identify key factors driving healthcare expenses. Through extensive data analysis, actionable insights were developed to aid a healthcare company in managing costs effectively.",
+      src: 'Healthcare3.jpeg',
+      githubLink: "https://github.com/LahariChowtoori/HealthCare-Cost-Analysis"
     },
     {
       id:3,
-      title: "Unsupervised Sentiment Analysis of Tweets on GPT-4 March 2023 ",
-      des: "• Performed unsupervised sentiment analysis on a dataset of 28,000 tweets related to GPT-4 using K-means clustering, segmenting tweets into positive, negative, and neutral sentiments based on word embeddings generated from Word2Vec. • Preprocessed and cleaned tweet data, including filtering, tokenization, lemmatization, and phrase detection using techniques like lowercasing, removing mentions/links, and leveraging NLTK and Gensim libraries. • Evaluated model performance against pre-trained sentiment analysis models like BERT and VADER, computing Cohen’s Kappa scores to measure agreement with human-labeled sentiments. • Carried out comprehensive data exploration and visualization using techniques like word clouds and trend analysis to identify patterns and insights within the GPT-4 tweet dataset.",
-      src: 'Todo.png',
-      githubLink: "https://github.com/ChowtooriKedari/todo_manager"
+      title: "Unsupervised Sentiment Analysis of Tweets on GPT-4 ",
+      des: "The Unsupervised Sentiment Analysis of GPT-4 Tweets project aims to evaluate GPT-4's performance in understanding sentiment expressed in tweets. Leveraging a dataset sourced from Kaggle, the project employs unsupervised techniques, focusing on K-means clustering, to categorize tweets as positive, negative, or neutral. By preprocessing the data and utilizing pre-trained models, the project aims to assess the accuracy of sentiment analysis, comparing results against established benchmarks using Cohen’s Kappa coefficient. Through this investigation, the project seeks to provide insights into user opinions and enhance our understanding of GPT-4's reception in online discourse.",
+      src: 'X logo.png',
+      githubLink: "https://github.com/LahariChowtoori/Unsupervised-Sentiment-Analysis-of-GPT-4-Tweets"
+    },
+    {
+      id:4,
+      title: "SYR Cityline:Online Portal For City Services",
+      des: "SYRCityline is an innovative system offering constituents multiple avenues—mobile app, online portal, and phone—to report non-emergency service requests to the City of Syracuse, facilitating swift resolution of quality-of-life issues like potholes and illegal dumping. The project aims to use Tableau to analyze request demographics, delve into request specifics, and evaluate government responsiveness, leveraging demographic or location-based data to enhance understanding and improve service delivery.",
+      src: 'syracuse new.jpg',
+      githubLink: "https://github.com/LahariChowtoori/SYRCityline-Online-Portal-for-City-Services"
     }
     
   ];

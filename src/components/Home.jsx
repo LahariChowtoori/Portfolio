@@ -39,7 +39,7 @@ const Home = () => {
           />
         </h2>
         <div className='text-[white] py-4 max-w-[900px] pl-4 text-justify' id="AboutContentCursor">
-          <p>I am a data scientist with 5+ years of experience in AI, big data analytics, and cloud solutions. I excel in predictive modeling, anomaly detection, and advanced data visualization, with a strong focus on sustainability and efficiency. Awarded for my research at Syracuse University, I am adept at delivering data-driven insights for diverse clients.       </p>
+          <p> I am an experienced data scientist with over 5 years of experience leading interdisciplinary teams on projects for government and industry clients. I specialize in AI, big data analytics, and cloud-based solutions. My expertise includes predictive modeling, anomaly detection, and advanced data visualization.I focus on developing data-driven strategies to boost sustainability and business efficiency, and I am skilled at delivering technical insights through presentations to diverse audiences.I was honored with the ‘John R. Weitzel Memorial Award’ from Syracuse University for my contributions to information systems research.</p>
             </div>
       </div>
       <div>
