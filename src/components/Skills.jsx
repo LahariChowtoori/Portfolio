@@ -1,82 +1,189 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
-import Tableau from '../assets/Tableau.png';
-import Azure from '../assets/Azure.png';
-import JavaScript from '../assets/javascript.png';
-import Angular from '../assets/Angular.png';
-import Node from '../assets/node.png';
-import Sql from '../assets/SQL.png';
-import GitHub from '../assets/github.png';
-import Unity from '../assets/Unity.png'; 
-import CSharp from '../assets/CSharp.png';
-import TypeScript from '../assets/TypeScript.png';
-import Maya from '../assets/Maya.png';
-import UnityImage from '../assets/UnityLogo.png';
-import Python from  '../assets/python.jpg';
+const SkillsSection = styled.section`
+  padding: 50px 0;
+`;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+`;
+
+const SectionTitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+const SectionTitle = styled.p`
+  font-size: 2.5em;
+  font-weight: bold;
+  border-bottom: 4px solid #ec4899; /* Set border color to pink-600 */
+  color: #fff; /* Set text color to white */
+`;
+
+const SkillsContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center; /* Center items horizontally */
+`;
+
+const SkillCategory = styled.div`
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+`;
+
+const SkillCategoryHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  background-opacity: 0.25;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  font-weight: 500;
+`;
+
+const SkillCategoryTitle = styled.h3`
+  font-size: 1.5em;
+  margin: 0;
+`;
+
+const SkillList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: ${(props) => (props.isOpen ? '500px' : '0')};
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+`;
+
+const SkillItem = styled.li`
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  color: white; /* Set text color to white */
+`;
+
 const Skills = () => {
+  const [openCategory, setOpenCategory] = useState(null);
+
+  const toggleCategory = (index) => {
+    setOpenCategory(openCategory === index ? null : index);
+  };
+
   return (
-    <section name='skills' className=' border-b-[1px] border-b-gray-600 py-20 text-gray-300'>
-   
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-2 flex flex-col justify-center w-full'>
-        <div className='flex flex-col w-full justify-center items-center'>
-                <p className='text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300'>Skills</p>
-               </div>
-
-          <div className='w-full grid grid-cols-2 sm:grid-cols-6 gap-5 text-center py-8 px-5'>
-          <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Angular} alt="HTML icon" />
-                  <p className='my-4'>Angular</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={TypeScript} alt="HTML icon" />
-                  <p className='my-4'>Type Script</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Tableau} alt="HTML icon" />
-                  <p className='my-4'>Tableau</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Azure} alt="HTML icon" />
-                  <p className='my-4'>Azure</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={JavaScript} alt="HTML icon" />
-                  <p className='my-4'>Java Script</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Unity} alt="HTML icon" />
-                  <p className='my-4'>Unity</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={GitHub} alt="HTML icon" />
-                  <p className='my-4'>GitHub</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Node} alt="HTML icon" />
-                  <p className='my-4'>Node JS</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Sql} alt="HTML icon" />
-                  <p className='my-4'>SQL Server</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={CSharp} alt="HTML icon" />
-                  <p className='my-4'>C#</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Python} alt="HTML icon" />
-                  <p className='my-4'>python</p>
-              </div>
-              <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto' src={Maya} alt="HTML icon" />
-                  <p className='my-4'>Maya</p>
-              </div>
-
-          </div>
-      </div>
-    </section>
+    <SkillsSection id="skills">
+      <Container>
+        <SectionTitleContainer>
+          <SectionTitle>Skills</SectionTitle>
+        </SectionTitleContainer>
+        <br></br>
+        <SkillsContent>
+          {skillData.map((category, index) => (
+            <SkillCategory key={index}>
+              <SkillCategoryHeader onClick={() => toggleCategory(index)}>
+                <SkillCategoryTitle>{category.title}</SkillCategoryTitle>
+                {openCategory === index ? <FaChevronUp /> : <FaChevronDown />}
+              </SkillCategoryHeader>
+              <SkillList isOpen={openCategory === index}>
+                {category.skills.map((skill, skillIndex) => (
+                  <SkillItem key={skillIndex}>{skill}</SkillItem>
+                ))}
+              </SkillList>
+            </SkillCategory>
+          ))}
+        </SkillsContent>
+      </Container>
+    </SkillsSection>
   );
 };
+
+const skillData = [
+  {
+    title: 'Programming',
+    skills: [
+      'Python (NumPy, Pandas, Scikit-learn, Seaborn, TensorFlow, Keras)',
+      'PySpark',
+      'R',
+      'SQL',
+      'HTML5'
+    ]
+  },
+  {
+    title: 'Frameworks & Tools',
+    skills: [
+      'Tableau',
+      'Power BI',
+      'GitHub',
+      'ServiceNow',
+      'Netcool',
+      'Snowflake',
+      'Big Query',
+      'Databricks',
+      'MLflow',
+      'DBT cloud',
+      'Docker',
+      'Excel'
+    ]
+  },
+  {
+    title: 'Database & Cloud',
+    skills: ['MySQL', 'PostgreSQL', 'MS Access', 'MongoDB', 'Azure', 'AWS']
+  },
+  {
+    title: 'Data Analytics',
+    skills: [
+      'Normalization',
+      'T-tests',
+      'Chi-Squared tests',
+      'Bayes Factor',
+      'Hypothesis testing',
+      'Sampling',
+      'VIF',
+      'Linear Assumptions'
+    ]
+  },
+  {
+    title: 'ML / Deep Learning',
+    skills: [
+      'Naive Bayes',
+      'Random Forests',
+      'Time Series',
+      'Regression',
+      'Bagging and Boosting',
+      'Cosine Similarity',
+      'Decision Trees',
+      'Neural Networks',
+      'LSTM',
+      'GRU'
+    ]
+  },
+  {
+    title: 'NLP / AI',
+    skills: [
+      'BERT',
+      'LLM',
+      'GPT 3.5',
+      'GEN AI',
+      'OpenAI',
+      'Transformers',
+      'NLTK',
+      'Spacy',
+      'Word2Vec'
+    ]
+  }
+];
 
 export default Skills;
