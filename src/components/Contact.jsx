@@ -16,11 +16,10 @@ const Contact = () => {
     <div className="flex flex-col gap-4 justify-center items-center text-center rounded-lg p-10  duration-1000">
       <h3 className="text-3xl font-bold text-white">Lahari Chowtoori</h3>
       <p className="text-lg font-normal text-designColor">
-        Data Scientist and Researcher
+        Data Scientist,ML Engineer, Data Analyst and Business Analyst
       </p>
       <p className="text-base text-gray-400 tracking-wide">
-        Hello, Thank you for taking time to visit my portfolio! Please contact me on the below details if 
-        you&apos;re in search for a Data Scientist.
+        Hey there,thanks for checking out my portfolio! I am just an email away and open to chat anytime!
       </p>
       <p className="text-base text-md text-gray-400 flex items-center gap-2">
         Phone:{" "}
