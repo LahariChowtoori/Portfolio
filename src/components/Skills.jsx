@@ -4,6 +4,7 @@ import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const SkillsSection = styled.section`
   padding: 50px 0;
+  border-bottom: 1px solid #4b5563; /* 1px bottom border with gray color */
 `;
 
 const Container = styled.div`
