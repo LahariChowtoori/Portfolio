@@ -10,6 +10,7 @@ import WebDevProjects from "./components/Work/WebDevProjects";
 import ModelingAnimation from "./components/Work/ModelingAnimation";
 import Photography from "./components/Work/Photography";
 import Experience from "./components/Experience/Experience";
+import Education from "./components/Education";
 import Footer from "./components/Footer";
 import {BrowserRouter as Router, Switch, Route,Routes} from "react-router-dom";
 
@@ -25,6 +26,7 @@ function App() {
               <div className="max-w-screen-xl mx-auto">
               <Home />
               <Skills />
+              <Education />
               <Experience />
               <Work />
               </div>
